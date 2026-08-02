@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="自然之域 NatureArea — 纯净稳定生存服。地址 na.of.cd，核心 Leaves 1.21.8，支持 Java 1.12+。长期开放，欢迎加入。" />
+  <meta name="theme-color" content="#0c2418" />
+  <title>自然之域 · NatureArea</title>
+
+  <!--
+    本地运行方式（任选其一）：
+      1. VS Code 安装 Live Server 插件，右键 index.html → Open with Live Server
+      2. 终端执行： python -m http.server 8000    然后访问 http://localhost:8000
+      3. 终端执行： npx serve                     然后访问提示的地址
+    （ES Modules 需要 HTTP 环境，请勿直接双击 file:// 打开）
+  -->
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/pages.css" />
+</head>
+<body>
+  <!-- 背景层：深绿渐变 + 萤火/星光光点（由 JS 生成） -->
+  <div id="bg" aria-hidden="true"></div>
+
+  <!-- 导航栏（由 components/navbar.js 渲染） -->
+  <header id="navbar"></header>
+
+  <!-- 页面挂载点（由 core/router.js 渲染） -->
+  <main id="app"></main>
+
+  <!-- 页脚（由 components/footer.js 渲染） -->
+  <footer id="footer"></footer>
+
+  <!-- 全局提示 -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
