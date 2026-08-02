@@ -406,6 +406,21 @@
   border: 1px solid rgba(248, 113, 113, 0.4);
 }
 
+.status-badge .status-dot {
+  background: var(--text-faint);
+}
+
+.status-badge.online .status-dot {
+  background: var(--online);
+  box-shadow: 0 0 8px 2px rgba(74, 222, 128, 0.6);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.status-badge.offline .status-dot {
+  background: var(--offline);
+  box-shadow: 0 0 8px 2px rgba(248, 113, 113, 0.5);
+}
+
 .status-main {
   display: grid;
   grid-template-columns: 1fr auto;
