@@ -17,6 +17,12 @@ export const CONFIG = {
     motdFallback: '🌿 自然之域 · NatureArea',
   },
 
+  /* 服务器管理人员：增删改只动这里 */
+  staff: [
+    { role: '服主', id: 'KD_Klin', qqName: 'HHT' },
+    { role: '管理员', id: 'Administration520', qqName: 'HeftySoup214746' },
+  ],
+
   api: {
     endpoint: 'https://uapis.cn/api/v1/game/minecraft/serverstatus',
     params: { server: 'na.of.cd' },
@@ -30,4 +36,14 @@ export const CONFIG = {
     { path: '/guide', label: '入服指引' },
     { path: '/contact', label: '联系方式' },
   ],
+
+  contact: {
+    qqGroup: {
+      number: '980829992',
+      // 管理员在 https://qun.qq.com/join.html 生成的一键加群链接
+      // 形如 https://qm.qq.com/q/xxxxx 或 https://qm.qq.com/cgi-bin/qm/qr?k=xxxxx
+      // 未填写时，按钮自动退化为「复制群号」；填写后变「一键加群」
+      joinLink: '',
+    },
+  },
 };

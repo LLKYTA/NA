@@ -38,6 +38,50 @@ export const contact = {
       ]),
     ]));
 
+    /* ---- QQ 交流群 ---- */
+    const qq = CONFIG.contact.qqGroup;
+    const qqActions = [];
+    if (qq.joinLink) {
+      qqActions.push(el('button', {
+        class: 'btn btn-primary',
+        type: 'button',
+        onclick: () => window.open(qq.joinLink, '_blank', 'noopener'),
+      }, [el('span', { text: '🚀 一键加群' })]));
+    }
+    qqActions.push(el('button', {
+      class: 'btn btn-ghost',
+      type: 'button',
+      onclick: async () => {
+        const ok = await copyText(qq.number);
+        toast(ok ? `已复制群号 ${qq.number}` : '复制失败，请手动复制');
+      },
+    }, [el('span', { text: '📋 复制群号' })]));
+
+    container.appendChild(el('section', { class: 'server-grid' }, [
+      el('div', { class: 'glass card', style: 'text-align:center;padding:34px 24px' }, [
+        el('h2', { class: 'pixel-title', text: '💬 QQ 交流群' }),
+        el('p', { class: 'muted', style: 'margin:10px 0 20px' }, [
+          '群号：',
+          el('span', { class: 'mono', text: qq.number }),
+        ]),
+        el('div', { class: 'home-cta', style: 'margin-top:0' }, qqActions),
+        el('p', {
+          class: 'muted small',
+          style: 'margin-top:14px',
+          text: qq.joinLink ? '点击「一键加群」即可加入' : '加群链接尚未配置：请先在 QQ 内搜索群号加入，或联系管理员生成加群链接',
+        }),
+      ]),
+    ]));
+
+    /* ---- 服务器管理人员 ---- */
+    container.appendChild(el('section', { class: 'server-grid' }, [
+      el('div', { class: 'staff-head' }, [
+        el('h2', { class: 'pixel-title', text: '👥 服务器管理人员' }),
+        el('div', { class: 'sub muted', text: '疑问或建议，可随时联系他们' }),
+      ]),
+      el('div', { class: 'staff-grid' }, CONFIG.staff.map(staffCard)),
+    ]));
+
     /* ---- 底部欢迎横幅 ---- */
     container.appendChild(el('section', { class: 'server-grid' }, [
       el('div', { class: 'glass card', style: 'text-align:center;padding:38px 24px' }, [
@@ -71,5 +115,17 @@ function contactCard(icon, title, body, action) {
     ...(action
       ? [el('button', { class: 'btn btn-ghost btn-sm', type: 'button', onclick: action.onclick }, [el('span', { text: action.label })])]
       : []),
+  ]);
+}
+
+function staffCard(staff) {
+  const roleClass = staff.role === '服主' ? 'role-owner' : 'role-admin';
+  return el('div', { class: 'glass glass-hover staff-card' }, [
+    el('span', { class: `staff-role ${roleClass}`, text: staff.role }),
+    el('div', { class: 'staff-id', text: staff.id }),
+    el('div', { class: 'staff-qq' }, [
+      el('span', { text: 'QQ：' }),
+      el('span', { class: 'mono', text: staff.qqName }),
+    ]),
   ]);
 }

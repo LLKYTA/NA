@@ -296,3 +296,66 @@
 .contact-card .btn {
   margin-top: 14px;
 }
+
+/* ---------- 服务器管理人员 ---------- */
+.staff-head {
+  margin-bottom: 18px;
+}
+
+.staff-head h2 {
+  font-size: clamp(1.2rem, 3.2vw, 1.6rem);
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.staff-card {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.staff-role {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.staff-role.role-owner {
+  color: var(--warning);
+  background: rgba(251, 191, 36, 0.14);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.staff-role.role-admin {
+  color: var(--accent);
+  background: rgba(124, 255, 178, 0.14);
+  border: 1px solid rgba(124, 255, 178, 0.4);
+}
+
+.staff-id {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+
+.staff-qq {
+  color: var(--text-dim);
+  font-size: 0.88rem;
+}
+
+.staff-qq .mono {
+  color: var(--text);
+  font-weight: 600;
+}
