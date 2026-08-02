@@ -20,7 +20,10 @@ export function statusCard(s, { onRefresh } = {}) {
   ]);
 
   card.appendChild(el('div', { class: 'status-head' }, [
-    el('div', { class: 'status-title' }, [el('span', { text: '🌿 服务器状态' })]),
+    el('div', { class: 'status-title' }, [
+      el('img', { class: 'status-icon', src: CONFIG.site.icon, alt: '' }),
+      el('span', { text: '服务器状态' }),
+    ]),
     badge,
   ]));
 

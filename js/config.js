@@ -9,6 +9,8 @@ export const CONFIG = {
     nameEn: 'NatureArea',
     tagline: '纯净稳定生存服 · 长期开放 · 欢迎加入',
     footerNote: '自然之域管理组',
+    /* 服务器图标：替换图标时直接覆盖 img/server-icon.jpg 即可 */
+    icon: 'img/server-icon.jpg',
   },
 
   server: {

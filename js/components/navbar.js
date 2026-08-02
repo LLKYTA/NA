@@ -14,12 +14,13 @@ export function mountNavbar() {
 
   /* ---- Logo ---- */
   const brand = el('a', { class: 'nav-brand', href: '#/', 'aria-label': `${CONFIG.site.name} 首页` }, [
-    el('span', { class: 'pixel-block', 'aria-hidden': 'true' }, [
-      el('span', { class: 'g1' }),
-      el('span', { class: 'g2' }),
-      el('span', { class: 'g3' }),
-      el('span', { class: 'g4' }),
-    ]),
+    el('img', {
+      class: 'nav-logo',
+      src: CONFIG.site.icon,
+      alt: `${CONFIG.site.name} 服务器图标`,
+      width: '28',
+      height: '28',
+    }),
     el('span', { text: CONFIG.site.name }),
     el('span', { class: 'sub', text: CONFIG.site.nameEn.toUpperCase() }),
   ]);

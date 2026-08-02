@@ -28,6 +28,16 @@
   color: var(--accent-dim);
 }
 
+.hero-icon {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--glass-highlight);
+  box-shadow: 0 0 0 6px rgba(124, 255, 178, 0.08), 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
 .hero h1 {
   font-size: clamp(2.1rem, 7vw, 3.6rem);
   line-height: 1.15;

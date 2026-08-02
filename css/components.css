@@ -88,22 +88,16 @@
   color: var(--accent);
 }
 
-.nav-brand .pixel-block {
-  display: inline-flex;
-  width: 22px;
-  height: 22px;
+.nav-brand .nav-logo {
+  width: 28px;
+  height: 28px;
   flex: none;
+  border-radius: 7px;
+  object-fit: cover;
+  border: 1px solid var(--glass-highlight);
+  box-shadow: 0 0 12px rgba(124, 255, 178, 0.25);
 }
 
-.nav-brand .pixel-block span {
-  width: 50%;
-  height: 50%;
-}
-
-.nav-brand .pixel-block .g1 { background: #22c55e; border-right: 1px solid rgba(0,0,0,.35); }
-.nav-brand .pixel-block .g2 { background: #16a34a; border-bottom: 1px solid rgba(0,0,0,.35); }
-.nav-brand .pixel-block .g3 { background: #4ade80; border-left: 1px solid rgba(0,0,0,.35); }
-.nav-brand .pixel-block .g4 { background: #6d28d9; border-bottom: 1px solid rgba(0,0,0,.35); }
 .nav-brand .sub {
   font-size: 0.72rem;
   color: var(--text-dim);
@@ -374,6 +368,14 @@
   gap: 10px;
   font-size: 1.05rem;
   font-weight: 700;
+}
+
+.status-title .status-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex: none;
 }
 
 .status-label {

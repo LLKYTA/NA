@@ -49,6 +49,7 @@ npx serve                      # 访问提示的地址
 - **改信息**（地址、轮询间隔、导航项）→ 改 `js/config.js`
 - **改插件列表** → 改 `js/data/plugins.js`
 - **改管理人员**（角色/游戏名/QQ名）→ 改 `js/config.js` 的 `staff` 数组
+- **替换服务器图标** → 直接覆盖 `img/server-icon.jpg`（640×640 正方形），页面导航/首页/状态卡自动生效
 - **新增页面** → 新建 `js/pages/xxx.js`，在 `js/main.js` 路由表注册一行
 
 ## QQ 交流群加群链接

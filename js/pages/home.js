@@ -15,6 +15,11 @@ export const home = {
     /* ---- Hero ---- */
     container.appendChild(el('section', { class: 'hero' }, [
       el('div', { class: 'kicker', text: 'NatureArea' }),
+      el('img', {
+        class: 'hero-icon',
+        src: CONFIG.site.icon,
+        alt: `${CONFIG.site.name} 服务器图标`,
+      }),
       el('h1', { class: 'pixel-title' }, [
         el('span', { class: 'glow-text', text: '自然之域' }),
         el('span', { text: ' · NatureArea' }),
