@@ -54,6 +54,22 @@ export function statusCard(s, { onRefresh } = {}) {
   }
   card.appendChild(motdBox);
 
+  /* ---- 在线玩家名单（服务器开放时才显示） ---- */
+  if (online) {
+    const names = s.onlinePlayers;
+    if (names && names.length > 0) {
+      card.appendChild(el('div', { class: 'player-list' }, [
+        el('div', { class: 'player-list-title', text: `👥 在线玩家（${names.length}）` }),
+        el('div', { class: 'chips' }, names.map((name) => el('span', { class: 'chip player-chip', text: name }))),
+      ]));
+    } else {
+      card.appendChild(el('div', {
+        class: 'player-hint',
+        text: names === null ? '当前服务器未开放玩家名单显示' : '当前暂无玩家在线',
+      }));
+    }
+  }
+
   /* ---- 元信息 ---- */
   card.appendChild(el('div', { class: 'status-meta' }, [
     metaItem('版本', s.version || '—'),

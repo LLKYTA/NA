@@ -58,6 +58,10 @@ export function getSnapshot() {
     ip: s?.ip || '',
     port: s?.port || '',
     motdHtml: s?.motd_html || '',
+    /* 在线玩家名单：服务器开放时返回数组，否则为 null */
+    onlinePlayers: Array.isArray(s?.online_players)
+      ? s.online_players.filter((n) => typeof n === 'string' && n.trim())
+      : null,
     loading: state.loading,
     error: state.error,
     known: !!s, // 是否拿到过一次数据

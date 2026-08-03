@@ -2,12 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Live Preview (内置浏览器)",
-            "type": "livePreview",
+            "name": "Launch Integrated Browser",
             "request": "launch",
+            "type": "editor-browser",
             "url": "http://localhost:5500",
             "webRoot": "${workspaceFolder}"
         },
+        
         {
             "command": "npm start",
             "name": "Run npm start",
@@ -27,7 +28,7 @@
     "compounds": [
         {
             "name": "一键启动前后端 (Server + 内置预览)",
-            "configurations": ["Run npm start", "Launch Live Preview (内置浏览器)"]
+            "configurations": ["Run npm start", "Launch Integrated Browser"]
         }
     ]
 }
