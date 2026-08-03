@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "d:\\NA",
+			"problemMatcher": [],
+			"label": "Live Preview: 运行服务器"
+		}
+	]
+}

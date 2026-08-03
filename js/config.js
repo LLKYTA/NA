@@ -22,7 +22,7 @@ export const CONFIG = {
   /* 服务器管理人员：增删改只动这里 */
   staff: [
     { role: '服主', id: 'KD_Klin', qqName: 'HHT' },
-    { role: '管理员', id: 'Administration520', qqName: 'HeftySoup214746' },
+    { role: '管理员', id: 'Administrator520', qqName: 'HeftySoup214746' },
   ],
 
   api: {
@@ -42,10 +42,9 @@ export const CONFIG = {
   contact: {
     qqGroup: {
       number: '980829992',
-      // 管理员在 https://qun.qq.com/join.html 生成的一键加群链接
-      // 形如 https://qm.qq.com/q/xxxxx 或 https://qm.qq.com/cgi-bin/qm/qr?k=xxxxx
-      // 未填写时，按钮自动退化为「复制群号」；填写后变「一键加群」
-      joinLink: '',
+      // QQ 官方「加群代码」生成的一键加群链接（含 authKey，请勿改动）
+      // 按钮将显示为「一键加群」；如需恢复「复制群号」，将 joinLink 清空即可
+      joinLink: 'https://qm.qq.com/cgi-bin/qm/qr?k=AnoVaOR92jfGWQfGOtwYlrJQmCaABgJL&jump_from=webapi&authKey=ql4/+U5HEZ0IMqx0eedPEI1RY8Hq8dWQ+avoB16UzYrvTmUlKpsW0Ul6ES86quZB',
     },
   },
 };

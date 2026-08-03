@@ -22,8 +22,6 @@ export const PLUGIN_CATEGORIES = [
     icon: '⚙️',
     title: '核心基础',
     plugins: [
-      { name: 'Essentials', desc: '基础指令与常用功能套件' },
-      { name: 'EssentialsX-GUI', desc: '基础功能的图形化操作界面' },
       { name: 'Vault', desc: '经济与权限的前置 API' },
       { name: 'LuckPerms', desc: '权限组管理' },
       { name: 'PlaceholderAPI', desc: '占位符扩展，供其他插件使用' },

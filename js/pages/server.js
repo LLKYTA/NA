@@ -6,6 +6,7 @@ import { CONFIG } from '../config.js';
 import { el } from '../core/dom.js';
 import { subscribe, refresh } from '../core/api.js';
 import { statusCard } from '../components/statusCard.js';
+import { pluginTotal } from '../data/plugins.js';
 
 export const server = {
   title: '服务器信息',
@@ -44,7 +45,7 @@ export const server = {
     container.appendChild(el('section', { class: 'server-grid' }, [
       el('div', { class: 'glass card' }, [
         el('h3', { text: '🧩 插件生态' }),
-        el('p', { class: 'muted', text: '服务器搭载 34 款插件，覆盖登录、安全、领地、聊天与玩法增强。' }),
+        el('p', { class: 'muted', text: `服务器搭载 ${pluginTotal()} 款插件，覆盖登录、安全、领地、聊天与玩法增强。` }),
         el('p', { style: 'margin-top:12px' }, [
           el('a', { class: 'btn btn-ghost btn-sm', href: '#/plugins' }, [
             el('span', { text: '查看插件列表 →' }),

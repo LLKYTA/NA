@@ -7,6 +7,7 @@ import { CONFIG } from '../config.js';
 import { el, copyText, toast } from '../core/dom.js';
 import { subscribe, refresh } from '../core/api.js';
 import { statusCard } from '../components/statusCard.js';
+import { pluginTotal } from '../data/plugins.js';
 
 export const home = {
   title: '首页',
@@ -74,7 +75,7 @@ export const home = {
         ]),
       ]),
       el('div', { class: 'grid grid-3' }, [
-        entryCard('🧩', '插件生态', '34 款插件：登录、领地、聊天、玩法增强一应俱全。', '#/plugins'),
+        entryCard('🧩', '插件生态', `${pluginTotal()} 款插件：登录、领地、聊天、玩法增强一应俱全。`, '#/plugins'),
         entryCard('📖', '入服指引', '三步注册登录，快速上手服务器玩法。', '#/guide'),
         entryCard('💬', '联系方式', '长期开放，疑问或建议随时反馈。', '#/contact'),
       ]),
