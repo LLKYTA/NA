@@ -1,11 +1,25 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "Live Preview",
-			"workspacePath": "d:\\NA",
-			"problemMatcher": [],
-			"label": "Live Preview: 运行服务器"
-		}
-	]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "serve",
+      "detail": "启动静态服务器 python -m http.server 8000（后台任务）",
+      "type": "shell",
+      "command": "python -m http.server 8000",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": { "regexp": "^$" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Serving HTTP",
+          "endsPattern": "Keyboard interrupt|Server stopped"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ]
 }

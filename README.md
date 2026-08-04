@@ -60,6 +60,17 @@ npx serve                      # 访问提示的地址
 
 或使用 VS Code 的 **Live Server** 插件直接打开。
 
+### 🖥 VS Code 一键运行（推荐）
+
+项目已内置 `.vscode/launch.json` 与 `.vscode/tasks.json`：
+
+1. 用 VS Code 打开项目文件夹
+2. 按 **F5**（运行 → 启动调试）
+3. 自动启动 `python -m http.server 8000`，并在 **VS Code 内置浏览器**中打开官网
+
+> 需要 VS Code **1.112+**（`editor-browser` 内置浏览器调试）。
+> 停止调试后 server 任务仍会留在终端；再次按 F5 前若提示「端口占用」，先停止上一个 server 终端。
+
 ## 📁 目录结构
 
 ```
